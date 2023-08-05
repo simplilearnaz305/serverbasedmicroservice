@@ -1,1 +1,40 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="#">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Welcome to ECS Android and iPhone</title>
+</head>
+<style media="screen">
+  body {
+              font-family: Helvetica, Arial, sans-serif;
+              font-weight: 600;
+              font-size: 20pt;
+              text-transform: uppercase;
+              text-align: center;
+              background: linear-gradient(rgba(255,153,0,1) 0%, rgba(65,183,197,1) 100%);
+              color: white;
+      }
+</style>
+<body>
+    <div class="container-fluid">
+      <div id="one" class="text-center">
+        <span>"Whats my url?"</span>
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <a href="../android/"><img src="http://YOURBUCKETNAME.s3-website.REGION.amazonaws.com/modules/42ec4c37303047b9ad9edc5f8d7537f8/v1/iloveandroid.jpg" width="400" height="400" alt="..." class="img-rounded"></a>
+        </div>
+        <div class="col-md-6 text-center">
+          <a href="../iphone/"><img src="http://YOURBUCKETNAME.s3-website.REGION.amazonaws.com/modules/42ec4c37303047b9ad9edc5f8d7537f8/v1/iloveiphone.jpg" width="400" height="400" alt="..." class="img-rounded"></a>
+        </div>
+      </div>
+    </div>
+<script>
+    $('#one span').text(window.location.href);
+</script>
+</body>
+</html>
