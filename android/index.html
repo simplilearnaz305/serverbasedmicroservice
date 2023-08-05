@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ECS Cats</title>
+    <style>
+      html {
+              font-family: Helvetica, Arial, sans-serif;
+              font-weight: 600;
+              font-size: 20pt;
+              text-transform: uppercase;
+              text-align: center;
+              background: linear-gradient(rgba(255,153,0,1) 0%, rgba(65,183,197,1) 100%);
+              color: white;
+      }
+      img {
+          max-width: 60%;
+          height: 80vh;
+          border: 2px solid white;
+          border-radius: 25px;
+      }
+    </style>
+  </head>
+  <h1>Kitten Happiness</h1>
+  <script language="javascript">
+    var imgArray = new Array();
+    var bucket =
+      "https://ee-assets-prod-us-east-1.s3.amazonaws.com/modules/42ec4c37303047b9ad9edc5f8d7537f8/v1/cats/";
+    var ext = ".jpeg";
+    for (i = 0; i < 10; i++) {
+      imgArray[i] = bucket + (i + 1) + ext;
+    }
+    console.log(imgArray);
+    function showImage() {
+      var imgNum = Math.round(Math.random() * 9);
+      console.log(imgNum);
+      var objImg = document.getElementById("introImg");
+      objImg.src = imgArray[imgNum];
+    }
+  </script>
+    <body onload="showImage()">
+      <img id="introImg" border="0" />
+    </body>
+</html>
